@@ -44,3 +44,18 @@ $ cowsay hello world
                 ||----w |
                 ||     ||
 ```
+
+Notebook Syntax
+----
+
+A typical notebook has the following structures:
+
+```
+### This is a comment
+
+$ <some shell command>
+Some output
+```
+
+For working with this kind of format, basic syntax highlighting is offered, to distinguish comments, commands, and output from each other.
+Use extension `.wk` instead of `.txt` and the highlighting will be used automatically.
