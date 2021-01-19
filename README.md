@@ -31,7 +31,7 @@ omap ic <Plug>(InnerCommandMotion)
 nmap <Return> Xic
 ```
 
-With those mappings, I get notebooks which look like this:
+With those mappings, I get notebooks which look like this, just by pressing Enter on the line which looks like a command:
 
 ```
 $ cowsay hello world
