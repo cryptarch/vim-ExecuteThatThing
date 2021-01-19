@@ -18,7 +18,11 @@ function! ExecuteThatThing(type, ...)
     else
         silent exe "normal! `[v`]y`>"
     endif
-    silent exec "r ! " . escape(@", "%!#\r\n")
+    " The following guard protects against ill-formed motions.
+    " (Motivated by the dodgy InnerCommandMotion further down.)
+    if @" != "\n"
+        silent exec "r ! " . escape(@", "%!#\r\n")
+    endif
     let &selection = l:sel_save
     let @@=l:reg_save
 endfunction
